@@ -1,0 +1,6 @@
+name: User Listing
+description: This module will provide the user listing for People Manager Role
+package:  Custom
+
+type: module
+core: 8.x

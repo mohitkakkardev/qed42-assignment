@@ -1,0 +1,17 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function user_listing_theme($existing, $type, $theme, $path) {
+  return [
+    'user_listing' => [
+      'variables' => ['users' => NULL],
+    ],       
+  ];
+}
+
+function user_listing_entity_update(Drupal\Core\Entity\EntityInterface $entity){
+    if($entity->bundle() == 'user'){
+        \Drupal::service('router.builder')->rebuild();
+    }
+}

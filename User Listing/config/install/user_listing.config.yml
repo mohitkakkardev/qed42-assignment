@@ -1,0 +1,10 @@
+
+langcode: en
+status: true
+dependencies: {  }
+id: people_manager
+label: 'People Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'access user listing page'

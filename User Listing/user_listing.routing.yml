@@ -1,0 +1,7 @@
+user_listing.content:
+  path: '/users/birth-year/{birthYear}' 
+  defaults: 
+    _controller: '\Drupal\user_listing\Controller\ListingController::content' 
+    _title: 'User Listing Page'
+  requirements: 
+    _permission: 'access user listing page'

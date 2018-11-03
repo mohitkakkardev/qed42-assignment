@@ -1,0 +1,52 @@
+ <table style="width:100%">
+  {% if users %}
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Birth Date</th>
+  </tr>
+  <tr>
+    {% for user in users %}
+        <td>
+            {% if user.f_name %}
+                {{user.f_name}}
+            {% else %}
+                N/A
+            {% endif %}
+        </td>
+        <td>
+            {% if user.l_name %}
+                {{user.l_name}}
+            {% else %}
+                N/A
+            {% endif %}
+        </td>
+        <td>
+            {% if user.email %}
+                {{user.email}}
+            {% else %}
+                N/A
+            {% endif %}
+        </td>
+        <td>
+            {% if user.phone %}
+                {{user.phone}}
+            {% else %}
+                N/A
+            {% endif %}
+        </td>
+        <td>
+            {% if user.dob %}
+                {{user.dob}}
+            {% else %}
+                N/A
+            {% endif %}
+        </td> 
+    </tr>
+    {% endfor %}  
+    {% else %}
+        No result found.
+    {% endif %}
+</table> 

@@ -1,0 +1,4 @@
+access user listing page:
+  title: 'User Listing Page Access'
+  description: 'Gives permission to roles to acces User Listing Page'
+  restricted access: true

@@ -43,6 +43,7 @@ class ListingController extends ControllerBase{
         // return the result in custom theme
         return array(
             '#theme' => 'user_listing',
+            '#cache' => ['max-age' => 3600 * 5, 'tags' => ['user.user_list']],
             '#users' => $this->getUsersData($birthYear)
           );
     }
@@ -73,15 +74,5 @@ class ListingController extends ControllerBase{
         }
         return $finalResult;
     }
-    /**
-     * {@inheritdoc}
-     */
-    public function cacheMaxAge() {
-        $maxCacheTime = 3600 * 5;
-        return [
-          '#cache' => [
-            'max-age' => $maxCacheTime,
-          ]
-        ];
-    }
+
 }
